@@ -1,0 +1,77 @@
+.banner {
+  position: relative;
+  width: 500px;
+  height: 300px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+.wrapper li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  float: left;
+  width: 500px;
+  height: 300px;
+}
+
+.focus {
+  position: absolute;
+  bottom: 2%;
+  left: 50%;
+  border-radius: 20px;
+  background-color: rgba(50, 50, 50, 0.4);
+  opacity: 0;
+  transform: translateX(-50%);
+  transition: opacity 0.5s ease;
+}
+
+.focus li {
+  float: left;
+  width: 15px;
+  height: 15px;
+  margin: 5px 8px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+.focus li.active {
+  background-color: #fe0;
+}
+
+.arrow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 1.5rem;
+  font-weight: 700;
+  border-radius: 50%;
+  background-color: rgba(50, 50, 50, 0.4);
+  color: #fff;
+  cursor: pointer;
+  opacity: 0;
+  transform: translateY(-50%);
+  transition: opacity 0.5s ease;
+}
+
+.banner:hover .arrow,
+.banner:hover .focus {
+  opacity: 1;
+}
+
+.arrowLeft {
+  left: 2%;
+}
+
+.arrowRight {
+  right: 2%;
+}
