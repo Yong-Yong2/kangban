@@ -25,26 +25,49 @@ const Header = () => {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="mr-auto">
-            <Modal show={Show} onHide={Close}>
+            <Modal centered show={Show} onHide={Close}>
               <Modal.Header closeButton>
-                <Modal.Title>강반 로그인</Modal.Title>
+                <Modal.Title>
+                  <LogoImg src="./images/logo.png" />
+                  &nbsp; 로그인
+                </Modal.Title>
               </Modal.Header>
-              <Modal.Body>바디임</Modal.Body>
+              <Modal.Body>
+                <Form>
+                  <Form.Group controlId="formBasicEmail">
+                    <Form.Label>아이디</Form.Label>
+                    <Form.Control type="id" placeholder="아이디를 입력하세요" />
+                  </Form.Group>
+
+                  <Form.Group controlId="formBasicPassword">
+                    <Form.Label>비밀번호</Form.Label>
+                    <Form.Control
+                      type="password"
+                      placeholder="비밀번호를 입력하세요"
+                    />
+                  </Form.Group>
+
+                  {/* <Form.Group controlId="formBasicCheckbox">
+                    <Form.Check type="checkbox" label="Check me out" />
+                  </Form.Group> */}
+                  {/* <Button variant="primary" type="submit">
+                    Submit
+                  </Button> */}
+                </Form>
+              </Modal.Body>
               <Modal.Footer>
-                <Button variant="secondary" onClick={Close}>
+                <Button variant="outline-secondary" onClick={Close}>
                   닫기
                 </Button>
-                <Button variant="primary" onClick={Close}>
-                  저장
+                <Button variant="outline-danger" type="submit" onClick={Close}>
+                  로그인
                 </Button>
               </Modal.Footer>
             </Modal>
             <Nav.Link>
-              <NavLink to="/Login">
-                <Button variant="outline-danger" onClick={setShow}>
-                  로그인
-                </Button>
-              </NavLink>
+              <Button variant="outline-danger" onClick={setShow}>
+                로그인
+              </Button>
             </Nav.Link>
             <Nav.Link>
               <NavLink to="/Register">

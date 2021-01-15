@@ -10,7 +10,7 @@ const Register = () => {
       <ContCenter>
         <h2>
           <LogoImg src="./images/logo.png" />
-          회원가입
+          &nbsp; 회원가입
         </h2>
       </ContCenter>
       <DivisionLine />
@@ -31,7 +31,7 @@ const Register = () => {
 
           <Form.Group as={Col} controlId="formGridName">
             <Form.Label>이름</Form.Label>
-            <Form.Control type="name" placeholder="Password" />
+            <Form.Control type="name" placeholder="이름을 입력하세요" />
           </Form.Group>
         </Form.Row>
         <Form.Row>
