@@ -1,0 +1,21 @@
+
+server:
+  port: 8000
+  servlet:
+    context-path: /
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/kangban?serverTimezone=Asia/Seoul&useUnicode=true&characterEncoding=utf8
+#↑ kry DB 서버시간 설정
+    username: kry
+    password: kry1250
+#↑ 소스파일에 DB 계정정보를 넣으면 안될것 같은데 다른 방법이 있나?
+  jpa:
+    hibernate:
+      ddl-auto: create
+#↑ DB 테이블 생성후 값 넣어지는것 확인되면 update로 반드시 바꿔야 함, 이 문구가 남아있으면 안바꾼거임 잊지마셈...
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+    show-sql: true
