@@ -43,8 +43,9 @@ public class Member {
 	@Column(length = 500)
 	@NotBlank(message = "주소를 입력해주세요.")
 	private String maddress1;
-	
+
 	@Column(length = 500)
 	@NotBlank(message = "상세주소를 입력해주세요.")
 	private String maddress2;
+	
 }
